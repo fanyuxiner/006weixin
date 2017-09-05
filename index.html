@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>微信</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div id="js-header" class="header">
+        <a class="arrow-return" href="javascript:;"><img src="img/1_03.png" /></a>
+        <span class="header-title">1505班(9)</span>
+        <a class="group-header" href="javascript:;"><img src="img/1_05.png" /></a>
+    </div>
+    <div id="js-container" class="container">
+
+        <div class="flow-right clearfix">
+            <div class="right-header">
+                <div class="img-box">
+                    <img src="img/5_03_03.jpg" class="pic" />
+                </div>
+            </div>
+            <div class="right-txt clearfix">你好</div>
+        </div>
+        <div class="flow-left clearfix">
+            <div class="left-header">
+                <div class="img-box">
+                    <img src="img/2_08.jpg" class="pic" />
+                </div>
+            </div>
+            <div class="left-txt clearfix">在忙什么呢？</div>
+        </div>
+        <div class="flow-left clearfix">
+            <div class="left-header">
+                <div class="img-box">
+                    <img src="img/021_03.png" class="pic" />
+                </div>
+            </div>
+            <div class="left-txt clearfix">好好学习两个月，争取高薪就业好好学习两个月，争取高薪就业好好学习两个月，争取高薪就业好好学习两个月，争取高薪就业好好学习两个月，争取高薪就业</div>
+        </div>
+        <div class="flow-left clearfix">
+            <div class="left-header">
+                <div class="img-box">
+                    <img src="img/123.png" class="pic" />
+                </div>
+            </div>
+            <div class="img1 clearfix ">  
+                <img src="img/8_03.jpg" class="imgs" />
+            </div>
+            <div class="big">
+                <div class="bg">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flow-left clearfix">
+            <div class="left-header">
+                <div class="img-box">
+                    <img src="img/123.png" class="pic" />
+                </div>
+            </div>
+            <div class="img2 clearfix"><img src="img/8_06.jpg" /></div>
+            
+        </div>
+        <div class="flow-left clearfix">
+            <div class="left-header">
+                <div class="img-box">
+                    <img src="img/021_03.png" class="pic" />
+                </div>
+            </div>
+            <div class="left-txt clearfix img_total  con div-img1" id="txt-a">
+                <div class="div-img " id="div-img1">
+                    <img class="active" src="img/au3.png" />
+                    <img src="img/au1.png" />
+                    <img src="img/au2.png" />
+                    
+                </div>
+                <audio src="1.mp3"></audio>
+            </div>
+            <div class="red">
+                <p><img src="img/021_15_02.jpg" alt=""></p>
+                <span class="js-long">43</span><b>"</b>
+              </div>
+        </div>
+        <div class="flow-left clearfix">
+            <div class="left-header">
+                <div class="img-box">
+                    <img src="img/021_03.png" class="pic" />
+                </div>
+            </div>
+            <div class="left-txt clearfix img_total  con  div-img1">
+                <div class="div-img " id="div-img1">
+                    <img class="active" src="img/au3.png" />
+                    <img src="img/au1.png" />
+                    <img src="img/au2.png" />
+                </div>
+                <audio src="test.mp3"></audio>
+            </div>
+            <div class="red">
+                <p><img src="img/021_15_02.jpg" alt=""></p>
+                <span class="js-long">43</span><b>"</b>
+              </div>
+        </div>
+
+    </div>
+
+    <div id="js-footer" class="footer">
+        <a href="javascript:;" class="check-key"><img src="img/222_10.png" /></a>
+        <div class="check-main">
+            <input type="text" class="input-show" />
+            <span class="check-text">按住说话</span>
+        </div>
+        <a href="javascript:;" class="check-smile"><img src="img/222_12.png" /></a>
+        <a href="javascript:;" class="check-plus"><img src="img/222_14.png" /></a>
+    </div>
+    <script>
+        var img_total = document.getElementsByClassName("img_total")[0];
+        var audio = document.getElementsByTagName("audio");
+        var check_main = document.getElementsByClassName("check-main")[0];
+        var input_show = document.getElementsByClassName("input-show")[0];
+        var check_text = document.getElementsByClassName("check-text")[0];
+        var a1 = document.getElementsByClassName("check-key")[0];
+        var con = document.getElementsByClassName("con");
+        var pho = document.getElementsByClassName("pho");
+        var img1 = document.getElementsByClassName("img1")[0];
+        var imgs = document.getElementsByClassName("imgs"); 
+        var big = document.getElementsByClassName("big")[0];
+        var bg = document.getElementsByClassName("bg")[0];
+        
+        var flag = true;
+        var speed = 0;
+        var num = 0;
+        var timer = "";
+        // function getbig(){
+        //     alert(123)
+        //     img1.max-width+=50;img1.height+=50 
+        // }
+//         var flag = true,
+//             pho = document.getElementsByClassName('pho')[0];
+//          pho.onclick =  function(){
+//        imgH = pho.height+'px'; 
+//        imgW = pho.width+'px'; 
+//        if(flag){
+//            flag = false;
+//            imgH = 1500+'px';alert(imgH)
+//            imgW =1500+'px';
+//        }
+//    }
+        for (var i = 0; i < con.length; i++) {
+            con[i].onclick = function() {
+                var a = this.children[1];
+                var img1 = this.children[0];
+                var imgs = img1.children;
+                if (flag == false) {
+                    a.pause();
+                    clearInterval(timer);
+                    for (var j = 0; j < imgs.length; j++) {
+                        imgs[j].className = "";
+                    }
+                    imgs[0].className = "active";
+                    flag = true;
+                    console.log("暂停");
+                } else {
+                    for (var i = 0; i < con.length; i++) {
+                        audio[i].pause();
+                    }
+                    timer = setInterval(function() {
+                        num++;
+                        if (num > imgs.length - 1) {
+                            num = 0;
+                        }
+                        for (var j = 0; j < imgs.length; j++) {
+                            imgs[j].className = "";
+                        }
+                        imgs[num].className = "active";
+                    }, 500)
+                    a.play();
+                    a.currentTime = 0;
+                    flag = false;
+                    console.log("播放")
+                }
+            }
+
+        }
+        check_main.onclick = function() {
+            if (flag == false) {
+                input_show.style.display = "block";
+                check_text.style.display = "none";
+                flag = true;
+            } else {
+                input_show.style.display = "none";
+                check_text.style.display = "block";
+                flag = false;
+            }
+        }
+        // 图片放大
+        for (var i=0;i<imgs.length;i++){
+            imgs[i].onclick=function(event){
+                event = event || window.event;
+                var target=document.elementFromPoint(event.clientX,event.clientY);
+                showbig(target.src)
+                var widths=big.clientWidth;
+                var i=bg.children[0];
+                i.style.width=widths
+            }
+        }
+        big.onclick=function(){
+            big.style.display="none"
+        }
+        function showbig(src){
+            big.getElementsByTagName("img")[0].src=src;
+            big.style.display="block"
+        }
+    </script>
+</body>
+<ml>
