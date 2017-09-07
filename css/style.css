@@ -144,7 +144,7 @@ html {
     margin-right: 10px;
 }
 
-.right-txt {
+.right-txt,.right-speack {
     float: right;
     max-width: 65%;
     height: auto;
@@ -157,6 +157,17 @@ html {
 }
 
 .left-txt {
+    float: left;
+    max-width: 65%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    background: #ffffff;
+    padding: 10px;
+    word-wrap: break-word;
+    position: relative;
+}
+.left-speack {
     float: left;
     max-width: 65%;
     height: auto;
@@ -267,4 +278,7 @@ html {
 }
  .red p img{
   margin-left: 15px;
+}
+.red  .js-long{
+    margin-left: 15px;
 }
